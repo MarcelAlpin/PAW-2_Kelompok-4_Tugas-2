@@ -8,7 +8,8 @@ const expressLayouts = require("express-ejs-layouts");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var contactRouter =  require("./routes/contact");
+var aboutRouter = require("./routes/about");
+var contactRouter = require("./routes/contact");
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(expressLayouts);
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/about", aboutRouter);
 app.use("/contact", contactRouter);
 
 // catch 404 and forward to error handler
