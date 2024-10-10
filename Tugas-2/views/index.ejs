@@ -7,50 +7,40 @@
   <section class="mt-5">
     <h2>Produk Kami</h2>
     <div class="row">
+      <% products.forEach(product => { %>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card mb-4">
           <img
-            src="/images/arabika.jpg"
+            src="<%= product.image %>"
             class="card-img-top"
-            alt="Kopi Arabika"
+            alt="<%= product.name %>"
             style="height: 200px; object-fit: cover"
           />
           <div class="card-body">
-            <h5 class="card-title">Kopi Arabika</h5>
-            <p class="card-text">Rasa halus dan aroma yang menggoda.</p>
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text"><%= product.description %></p>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <% }); %>
+    </div>
+  </section>
+
+  <section class="mt-5">
+    <h2>Apa Kata Pelanggan?</h2>
+    <div class="row">
+      <% testimonials.forEach(testimonial => { %>
+      <div class="col-md-4 mb-4">
         <div class="card">
-          <img
-            src="/images/robusta.jpg"
-            class="card-img-top"
-            alt="Kopi Robusta"
-            style="height: 200px; object-fit: cover"
-          />
           <div class="card-body">
-            <h5 class="card-title">Kopi Robusta</h5>
-            <p class="card-text">Kekuatan rasa yang kuat dan penuh energi.</p>
+            <blockquote class="blockquote mb-0">
+              <p>"<%= testimonial.message %>"</p>
+              <footer class="blockquote-footer"><%= testimonial.name %></footer>
+            </blockquote>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img
-            src="/images/blend.jpg"
-            class="card-img-top"
-            alt="Kopi Blend"
-            style="height: 200px; object-fit: cover"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Kopi Blend</h5>
-            <p class="card-text">
-              Kombinasi sempurna dari berbagai jenis kopi.
-            </p>
-          </div>
-        </div>
-      </div>
+      <% }); %>
     </div>
   </section>
 </div>
