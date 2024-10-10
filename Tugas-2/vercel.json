@@ -2,5 +2,5 @@
   "version": 2,
   "name": "nodejs",
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+  "routes": [{ "src": "/(.*)", "dest": "tugas-2/app.js" }]
 }
