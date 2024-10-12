@@ -41,4 +41,21 @@ router.get('/', function(req, res, next) {
   res.render('index' , {title : 'Kopi Kopi', products, testimonials, layout : 'main'});
 });
 
+router.get('/api/products/:id', (req, res) => {
+  const products = [
+    { id: 1, name: "Kopi Arabika", description: "Rasa halus dan aroma yang menggoda." },
+    { id: 2, name: "Kopi Robusta", description: "Kekuatan rasa yang kuat dan penuh energi." },
+    { id: 3, name: "Kopi Blend", description: "Kombinasi sempurna dari berbagai jenis kopi." }
+  ];
+
+  const productId = parseInt(req.params.id); 
+  const product = products.find(p => p.id === productId); 
+  
+  if (!product) {
+    return res.status(404).json({ message: "Produk tidak ditemukan" });
+  }
+
+  res.json(product);
+});
+
 module.exports = router;
