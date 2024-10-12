@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ground Coffee</title>
+    <style>
+        body {
+            font-family:' Georgia, 'Times New Roman', Times, serif';
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .about-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .about-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000000;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 20px;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        .about-image {
+            flex: 0 0 40%;
+            text-align: center;
+        }
+        .about-image img {
+            max-width: 200%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .about-image img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                padding-right: 0;
+            }
+            .about-image {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <h1 class="about-title">ABOUT GROUND COFFEE</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Kopi bubuk adalah hasil dari proses pengolahan biji kopi yang telah dipanggang (roasting) dan digiling menjadi bentuk bubuk halus atau kasar, tergantung pada metode penyeduhan yang diinginkan. Proses pembuatan kopi bubuk dimulai dengan pemetikan biji kopi dari pohon, lalu biji tersebut dikeringkan dan diproses untuk menghilangkan kulit luar dan lapisan pelindungnya.</p>
+                <p>Setelah biji kopi bersih, proses pemanggangan dilakukan untuk mengembangkan rasa dan aroma kopi. Tingkat pemanggangan mempengaruhi karakter rasa kopi, dari ringan, sedang, hingga gelap. Setelah proses pemanggangan, biji kopi digiling menjadi bubuk dengan berbagai tingkat kehalusan.</p>
+                <p>Tingkat gilingan ini biasanya disesuaikan dengan metode penyeduhan kopi, seperti espresso yang memerlukan gilingan halus atau French press yang memerlukan gilingan kasar. Bubuk kopi yang dihasilkan kemudian dapat disimpan dalam kemasan kedap udara untuk menjaga kesegarannya.</p>
+                <p>Kopi bubuk menjadi pilihan yang praktis bagi banyak orang karena mudah diseduh dan menawarkan berbagai pilihan rasa tergantung jenis biji kopi yang digunakan.</p>
+            </div>
+            <div class="about-image">
+                <img src="/images/kopi.jpeg" alt="Ground Coffee Image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
